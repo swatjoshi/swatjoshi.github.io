@@ -1,0 +1,59 @@
+<body ng-controller='mainController'>
+	<div class='container'>
+	
+		<div class='row'>
+			<div class='col-sm-12'>
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<button class='btn btn-success pull-left' ng-click='user()'><span class='glyphicon glyphicon-user'></span> Need Help !!!</button>
+						<button class='btn btn-success pull-right' ng-click='agent()'>Want to Help !!</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class='panel panel-primary' ng-style="{'visibility': isUserOpen ?'visible':'hidden'}">
+			<div class='panel-body'>
+				<div class='row'>
+					<div class='col-sm-3'>
+						<button type="button" class="btn btn-primary" ng-click='ambulance()'>Ambulance</a>
+					</div>
+					<div class='col-sm-3'>
+						<button type="button" class="btn btn-primary" ng-click='fire()'>Fire Brigade</button>
+					</div>
+					<div class='col-sm-3'>
+						<button type="button" class="btn btn-primary" ng-click='police()'>Police</button>
+					</div>
+					<div class='col-sm-3 pull-right'>
+						<button type="button" class="btn btn-danger" ng-click='userRequestStatus()'>Know Status</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class='panel panel-primary' ng-style="{'visibility': isAgentOpen ?'visible':'hidden'}">
+			<div class='panel-body'>
+				<div class='row'>
+					<div class='col-sm-4'>
+						<button type="button" class="btn btn-primary" ng-click='ambAgent()'>Ambulance</button>
+					</div>
+					<div class='col-sm-4'>
+						<button type="button" class="btn btn-primary" ng-click='fireAgent()'>Fire Brigade</button>
+					</div>
+					<div class='col-sm-4'>
+						<button type="button" class="btn btn-primary" ng-click='policeAgent()'>Police</button>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+			<div>
+				<leaflet center="map.center" zoom="map.zoom"></leaflet>
+			</div>
+	
+		
+	</div>
+	
+</body>

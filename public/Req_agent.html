@@ -1,0 +1,21 @@
+<body ng-controller='reqAgentController'>
+	
+		<table class="table table-striped table-hover">
+			<thead>
+				<th>Username</th>
+				<th>Location</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat='rq in reqQueue'>
+					<td>{{rq.username}}</td>
+					<td>{{rq.address.latitude}},{{rq.address.longitude}},{{rq.address.city}},{{rq.address.region}}</td>
+					<td>
+						<button class='btn btn-success' ng-click='acceptReq(rq._id)' id='accept'>Accept</button>
+						<button class='btn btn-danger' ng-click='rejectReq(rq._id)' id='reject'>Reject</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	
+</body>

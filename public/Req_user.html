@@ -1,0 +1,19 @@
+<body ng-controller='reqUserController'>
+
+		<table class="table table-striped table-hover">
+		
+			<thead>
+					<th>Requested For</th>
+					<th>Status</th>
+					<th></th>
+			</thead>
+			<tbody ng-repeat="re in requestStack">
+				<tr>
+					<td>{{re.requestType}}</td>
+					<td>{{re.statusOfReq}}</td>
+					<td><p id='qoute' style='color:red'></p></td>
+				</tr>
+			</tbody>
+		</table>
+		
+</body>
